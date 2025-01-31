@@ -1,0 +1,14 @@
+name: "itmo-megaschoool"
+
+services:
+  itmo-megaschool:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: itmo-megaschool
+    hostname: itmo-megaschool
+    restart: "unless-stopped"
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
